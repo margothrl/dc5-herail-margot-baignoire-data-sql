@@ -1,4 +1,5 @@
 /* Requête 6 : Trouver tous les intermédiaires et leurs adresses associées. */
 
-SELECT name, id_address
+SELECT intermediary.name as name , intermediary.id_address, address.address as address
 FROM intermediary
+JOIN address ON intermediary.id_address = address.id_address;
